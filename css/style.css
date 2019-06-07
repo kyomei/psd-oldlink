@@ -67,4 +67,36 @@ body {
           margin-bottom: 5px;
           opacity: 0.7; }
 
+/* Style header area */
+#header {
+  height: 115px;
+  display: flex;
+  justify-content: center; }
+  #header .container {
+    display: flex;
+    justify-content: space-between; }
+    #header .container .logo {
+      display: flex;
+      align-items: center; }
+    #header .container #navbar {
+      display: flex;
+      align-items: center; }
+      #header .container #navbar ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex; }
+        #header .container #navbar ul li {
+          font-size: 16px;
+          margin-left: 50px;
+          font-weight: bold;
+          text-transform: uppercase; }
+          #header .container #navbar ul li a {
+            color: #666666;
+            text-decoration: none;
+            padding-bottom: 12px; }
+            #header .container #navbar ul li a:hover {
+              color: #0054ff;
+              border-bottom: 5px solid #0054ff; }
+
 /*# sourceMappingURL=style.css.map */
