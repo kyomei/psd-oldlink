@@ -14,3 +14,81 @@ body {
    padding: 0 10px;
    width: 1170px;
 }
+
+/* Style linha do topo area */
+#header-line {
+   height: 46px;
+   margin-bottom: 1px;
+   border-bottom: 1px solid #eeeced;   
+   background-color: #0054ff;
+   display: flex;
+   justify-content: center;
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+         display: flex;
+         align-items: center;
+         font-weight: bold;
+         font-size: 14px;
+         color: #fff;
+
+         img {
+            padding: 0 15px;
+         }
+      }
+      .right{
+         display: flex;
+         align-items: center;
+         // button nosso blog
+         a.blog {
+            border: 2px solid #00fbff;
+            color: #fff;
+            width: 215px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 20px;
+            margin-right: 42px;
+            transition: 0.5s;
+
+            &:hover {
+               color: #fff;
+               background: #00fbff;
+            }
+         }
+         // icones header line
+         .icon-instagram {
+            width: 22px;
+            height: 20px;               
+            background: url("../img/icon-socais.png") 0 0;
+         }
+         .icon-facebook {
+            width: 24px;
+            height: 20px;               
+            background: url("../img/icon-socais.png") -20px 0;
+         }
+         .icon-linkedin {
+            width: 24px;
+            height: 20px;               
+            background: url("../img/icon-socais.png") -43px 0;
+         }
+         .icon-search {
+            width: 24px;
+            height: 20px;             
+            background: url("../img/icon-socais.png") -73px 0;
+         }
+         // Style para icons
+         img {
+            transition: 0.1s;
+            &:hover {
+               margin-bottom: 5px;
+               opacity: 0.7;
+            }
+         }
+
+
+      }
+   }
+}
