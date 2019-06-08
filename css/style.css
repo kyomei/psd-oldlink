@@ -41,7 +41,8 @@ body {
         text-align: center;
         border-radius: 20px;
         margin-right: 42px;
-        transition: 0.5s; }
+        transition: 0.5s;
+        font-weight: 600; }
         #header-line .container .right a.blog:hover {
           color: #fff;
           background: #00fbff; }
@@ -98,5 +99,67 @@ body {
             #header .container #navbar ul li a:hover {
               color: #0054ff;
               border-bottom: 5px solid #0054ff; }
+
+/* Style Carousel area */
+#carousel {
+  height: 918px;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/carousel-background.png");
+  background-position: center;
+  background-size: cover; }
+  #carousel .container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative; }
+    #carousel .container .carousel-item {
+      display: flex;
+      align-items: center; }
+      #carousel .container .carousel-item .item-group {
+        width: 429px;
+        margin-right: 80px;
+        margin-bottom: 120px;
+        display: none; }
+        #carousel .container .carousel-item .item-group h2 {
+          color: #00fffc;
+          font-size: 45px;
+          font-weight: 900;
+          line-height: 53px;
+          margin-bottom: 20px; }
+        #carousel .container .carousel-item .item-group p {
+          font-size: 22px;
+          line-height: 30px;
+          color: #fff;
+          font-family: 'Noto Sans', sans-serif;
+          margin-bottom: 50px; }
+        #carousel .container .carousel-item .item-group .btn {
+          color: #00fffc;
+          font-weight: 900;
+          font-size: 25px;
+          text-decoration: none;
+          border-radius: 80px;
+          border: 5px solid #00fffc;
+          padding: 7px 70px; }
+    #carousel .container .carousel-controls {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-bottom: 80px;
+      margin-left: -100px;
+      width: 200px;
+      text-align: center; }
+      #carousel .container .carousel-controls ul {
+        margin: 0;
+        padding: 0;
+        list-style: none; }
+        #carousel .container .carousel-controls ul li {
+          display: inline-block;
+          padding: 7px;
+          margin: 0 5px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: 2px solid #00fffc; }
+        #carousel .container .carousel-controls ul li.active {
+          background: #00fffc; }
 
 /*# sourceMappingURL=style.css.map */
