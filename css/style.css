@@ -136,8 +136,7 @@ p {
     position: relative; }
     #carousel .container .carousel-item {
       display: flex;
-      align-items: center;
-      /* Next & previous buttons */ }
+      align-items: center; }
       #carousel .container .carousel-item .item-group {
         width: 429px;
         margin-right: 80px;
@@ -166,25 +165,6 @@ p {
           #carousel .container .carousel-item .item-group .btn:hover {
             color: #FFF;
             background-color: #00fffc; }
-      #carousel .container .carousel-item .prev, #carousel .container .carousel-item .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 15px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        user-select: none;
-        transition: 0.5s ease; }
-      #carousel .container .carousel-item .prev {
-        left: 0; }
-      #carousel .container .carousel-item .next {
-        right: 0; }
-      #carousel .container .carousel-item .prev:hover, #carousel .container .carousel-item .next:hover {
-        margin-top: -25px;
-        font-size: 24px; }
     #carousel .container .carousel-controls {
       position: absolute;
       bottom: 0;

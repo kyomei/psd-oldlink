@@ -227,32 +227,7 @@ p {
                   background-color: $secondary;
                }
             }
-         }
-
-         /* Next & previous buttons */
-         .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 15px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            user-select: none;
-            transition: 0.5s ease;
-         }
-         .prev {
-            left: 0;
-         }
-         .next {
-            right: 0;
-         }
-         .prev:hover, .next:hover {
-            margin-top: -25px;
-            font-size: 24px;
-         }
+         }         
       }
 
       .carousel-controls {
