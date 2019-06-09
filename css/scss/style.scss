@@ -21,6 +21,24 @@ p {
    font-size: 19px;
 }
 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 /* Style linha do topo area */
 #header-line {
    height: 46px;
@@ -33,7 +51,7 @@ p {
    .container {
       display: flex;
       justify-content: space-between;
-      
+
       // Coluna esquerda do topo
       .left {
          display: flex;
@@ -176,7 +194,7 @@ p {
             //margin-bottom: 20px;
             margin-right: 80px;
             margin-bottom: 120px;
-            display: none;
+            //display: none;
 
             h2 {
                color: $secondary;
@@ -203,12 +221,37 @@ p {
                border: 5px solid $secondary;
                padding: 7px 70px;
                transition: 0.8s;
-               
+
                &:hover {
                   color: #FFF;
                   background-color: $secondary;
                }
             }
+         }
+
+         /* Next & previous buttons */
+         .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 15px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            user-select: none;
+            transition: 0.5s ease;
+         }
+         .prev {
+            left: 0;
+         }
+         .next {
+            right: 0;
+         }
+         .prev:hover, .next:hover {
+            margin-top: -25px;
+            font-size: 24px;
          }
       }
 
@@ -260,6 +303,7 @@ p {
          img.logo {
             margin-top: 115px;
             padding-bottom: 390px;
+            //padding-bottom: 130px;
          }
          &:last-child {
             display: flex;
@@ -303,13 +347,14 @@ p {
    background-color: #0047d6;
    display: flex;
    margin-top: -50px;
-   padding-top: 220px;
+   //padding-top: 220px;
    justify-content: center;
 
    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 220px;
       .row {
          padding: 0px 40px;
 
@@ -357,9 +402,9 @@ p {
       }
 
       .text {
-         
+
          padding-right: 40px;
-         
+
          h2 {
             font-size: 24px;
             font-weight: bold;
@@ -387,7 +432,7 @@ p {
       }
       .text {
          padding-right: 40px;
-         
+
          h2 {
             font-size: 24px;
             font-weight: bold;

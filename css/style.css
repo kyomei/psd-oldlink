@@ -15,6 +15,23 @@ p {
   font-family: 'Noto Sans', sans-serif;
   font-size: 19px; }
 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 /* Style linha do topo area */
 #header-line {
   height: 46px;
@@ -119,12 +136,12 @@ p {
     position: relative; }
     #carousel .container .carousel-item {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      /* Next & previous buttons */ }
       #carousel .container .carousel-item .item-group {
         width: 429px;
         margin-right: 80px;
-        margin-bottom: 120px;
-        display: none; }
+        margin-bottom: 120px; }
         #carousel .container .carousel-item .item-group h2 {
           color: #00fffc;
           font-size: 45px;
@@ -149,6 +166,25 @@ p {
           #carousel .container .carousel-item .item-group .btn:hover {
             color: #FFF;
             background-color: #00fffc; }
+      #carousel .container .carousel-item .prev, #carousel .container .carousel-item .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 15px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        user-select: none;
+        transition: 0.5s ease; }
+      #carousel .container .carousel-item .prev {
+        left: 0; }
+      #carousel .container .carousel-item .next {
+        right: 0; }
+      #carousel .container .carousel-item .prev:hover, #carousel .container .carousel-item .next:hover {
+        margin-top: -25px;
+        font-size: 24px; }
     #carousel .container .carousel-controls {
       position: absolute;
       bottom: 0;
@@ -216,12 +252,12 @@ p {
   background-color: #0047d6;
   display: flex;
   margin-top: -50px;
-  padding-top: 220px;
   justify-content: center; }
   #services .container {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    padding-top: 220px; }
     #services .container .row {
       padding: 0px 40px; }
       #services .container .row:first-child h1 {
