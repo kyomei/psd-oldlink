@@ -3,18 +3,23 @@
     Author     : Rafael Jeferson <rafa.jefer@gmail.com>
 */
 
+/* Colors */
 $primary: #0054ff;
 $secondary: #00fffc;
 
+/* Reset */
 * {
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
 }
+
 .container {
    padding: 0 10px;
    width: 1170px;
 }
+
 p {
 
    font-family: 'Noto Sans', sans-serif;
@@ -23,27 +28,37 @@ p {
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+   from {
+      opacity: .4
+   }
+
+   to {
+      opacity: 1
+   }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+   from {
+      opacity: .4
+   }
+
+   to {
+      opacity: 1
+   }
 }
 
 /* Style linha do topo area */
 #header-line {
    height: 46px;
    margin-bottom: 1px;
-   border-bottom: 1px solid #eeeced;   
+   border-bottom: 1px solid #eeeced;
    background-color: #0054ff;
    display: flex;
    justify-content: center;
@@ -64,10 +79,12 @@ p {
             padding: 0 15px;
          }
       }
+
       // Coluna direita do topo
-      .right{
+      .right {
          display: flex;
          align-items: center;
+
          // button nosso blog
          a.blog {
             border: 2px solid #00fbff;
@@ -85,30 +102,36 @@ p {
                background: #00fbff;
             }
          }
+
          // icones header line
          .icon-instagram {
             width: 22px;
-            height: 20px;               
+            height: 20px;
             background: url("../img/icon-socais.png") 0 0;
          }
+
          .icon-facebook {
             width: 24px;
-            height: 20px;               
+            height: 20px;
             background: url("../img/icon-socais.png") -20px 0;
          }
+
          .icon-linkedin {
             width: 24px;
-            height: 20px;               
+            height: 20px;
             background: url("../img/icon-socais.png") -43px 0;
          }
+
          .icon-search {
             width: 24px;
-            height: 20px;             
+            height: 20px;
             background: url("../img/icon-socais.png") -73px 0;
          }
+
          // Efeitos para os icons no hover
          img {
             transition: 0.1s;
+
             &:hover {
                margin-bottom: 5px;
                opacity: 0.7;
@@ -123,17 +146,19 @@ p {
 /* Style header area */
 #header {
    height: 115px;
-   display: flex; 
+   display: flex;
    justify-content: center;
 
    .container {
       display: flex;
       justify-content: space-between;
+
       // Logo do site
       .logo {
          display: flex;
          align-items: center;
       }
+
       // Menu de navageção principal
       #navbar {
          display: flex;
@@ -182,6 +207,7 @@ p {
       display: flex;
       justify-content: flex-end;
       position: relative;
+
       // Cada slide do carousel
       .carousel-item {
          display: flex;
@@ -189,12 +215,8 @@ p {
 
          // Grupo de informações dos slides
          .item-group {
-            width: 429px;
-            //margin-right: 70px;
-            //margin-bottom: 20px;
             margin-right: 80px;
             margin-bottom: 120px;
-            //display: none;
 
             h2 {
                color: $secondary;
@@ -212,6 +234,7 @@ p {
                margin-bottom: 50px;
             }
 
+            // Botão carousel
             .btn {
                color: $secondary;
                font-weight: 900;
@@ -227,9 +250,10 @@ p {
                   background-color: $secondary;
                }
             }
-         }         
+         }
       }
 
+      /* Bolinhas de controle do carousel */
       .carousel-controls {
          position: absolute;
          bottom: 0;
@@ -250,8 +274,9 @@ p {
                margin: 0 5px;
                border-radius: 50%;
                cursor: pointer;
-               border: 2px solid $secondary;               
+               border: 2px solid $secondary;
             }
+
             li.active {
                background: $secondary;
             }
@@ -260,33 +285,59 @@ p {
    }
 }
 
+/* Style area Objetivos: Missão, Visão e Valor */
 #objetivos {
    height: 920px;
    display: flex;
    justify-content: center;
    background: url('../img/background.png') 0 -10px;
-   background-position: center -121px;
+   background-position: center -80px;
    background-size: cover;
 
    .container {
       display: flex;
       flex-direction: column;
-      //justify-content: center;
       align-items: center;
+      text-align: center;
 
       .row {
-         img.logo {
-            margin-top: 115px;
-            padding-bottom: 390px;
-            //padding-bottom: 130px;
+
+         // Titulo sobre a empresa
+         h1 {
+            color: $primary;
+            font-weight: bold;
          }
+
+         // Texto sobre a empresa
+         p {
+            margin-bottom: 60px;
+            color: #666666;
+            font-size: 22px;
+            max-width: 880px;
+            padding: 20px;
+            line-height: 39px;
+            font-family: 'Noto Sans', sans-serif;
+
+            // Destaque no paragrafo
+            span {
+               color: $primary;
+               font-weight: bold;
+            }
+         }
+
+         // Logo do site na seção
+         img.logo {
+            margin-top: 10px;
+            margin-bottom: 55px;
+         }
+
          &:last-child {
             display: flex;
 
+            // Quadrados Missão, Visão e Valores
             .box {
                height: 400px;
                width: 300px;
-               background: red;
                margin: 0 40px;
                display: flex;
                flex-direction: column;
@@ -297,17 +348,22 @@ p {
                border: 2px solid #e5e5e5;
                background-color: #fff;
 
+               // Titulo dos quadrados
                h2 {
-                  margin-top: 30px;
+                  margin-top: 15px;
                   margin-bottom: 8px;
                   color: $primary;
                   text-transform: uppercase;
                }
 
+               // Texto dos quadrados
                p {
                   line-height: 27px;
                   text-align: center;
                   color: #666666;
+                  font-size: 20px;
+                  width: 250px;
+                  padding: 0;
                   font-family: 'Noto Sans', sans-serif;
                }
             }
@@ -317,12 +373,12 @@ p {
    }
 }
 
+/* Style Servicoes */
 #services {
    height: 570px;
    background-color: #0047d6;
    display: flex;
    margin-top: -50px;
-   //padding-top: 220px;
    justify-content: center;
 
    .container {
@@ -330,9 +386,12 @@ p {
       flex-direction: column;
       align-items: center;
       padding-top: 220px;
+
+      // Linhas da seção serviços
       .row {
          padding: 0px 40px;
 
+         // Primeira linha da seção serviços
          &:first-child {
             h1 {
                color: #FFF;
@@ -341,12 +400,17 @@ p {
                margin-bottom: 60px;
             }
          }
+
+         // Última linha da seção serviços
          &:last-child {
             display: flex;
 
+            // Imagem dos serviços icon
             .services-image {
                margin-right: 50px;
             }
+
+            // Texto dos serviços
             .services-text {
                h2 {
                   font-size: 24px;
@@ -354,8 +418,9 @@ p {
                   text-transform: uppercase;
                   color: $secondary
                }
+
                p {
-                  color: #fff;  
+                  color: #fff;
                }
             }
          }
@@ -363,6 +428,7 @@ p {
    }
 }
 
+/* Style area consultoria */
 #consultoria {
    padding: 80px 0px;
    display: flex;
@@ -372,27 +438,33 @@ p {
    .container {
       display: flex;
 
+      // Image consultoria 
       .image {
          margin: 0 50px 0 40px;
       }
 
+      // Area de texto da consultoria 
       .text {
-
          padding-right: 40px;
 
+         // Titulo da consultoria
          h2 {
             font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
             color: $secondary
          }
+
+         // Texto da consultoria
          p {
-            color: #fff;  
+            color: #fff;
          }
       }
 
    }
 }
+
+/* Style area Cursos e Palestras */
 #cursos_palestras {
    padding: 90px 0px;
    display: flex;
@@ -402,21 +474,157 @@ p {
    .container {
       display: flex;
 
+      // Imagem 
       .image {
          margin: 0 50px 0 40px;
       }
+
+      // Area de texto
       .text {
          padding-right: 40px;
 
+         // Titulo
          h2 {
             font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
             color: $secondary
          }
+
+         // Texto
          p {
-            color: #fff;  
+            color: #fff;
          }
+      }
+   }
+}
+
+/* Style area contato com formulario */
+#contato {
+   height: 480px;
+   display: flex;
+   justify-content: center;
+
+   .container {
+      .row {
+         padding: 60px;
+
+         // Titulo da seção
+         h1 {
+            color: $primary;
+            text-transform: uppercase;
+            font-size: 32px;
+            text-align: center;
+         }
+
+         // Texto da seção
+         p {
+            color: #666666;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans', sans-serif;
+         }
+
+         // Style para formulário
+         form {
+            display: flex;
+            flex-direction: column;
+
+            // Inputs do formulario
+            input {
+               max-width: 1040px;
+               width: 100%;
+               display: block;
+               border-radius: 50px;
+               margin-bottom: 15px;
+               padding: 15px 40px;
+               outline: none;
+               font-size: 20px;
+               color: #8a8989;
+               border: 1px solid #e5e5e5;
+
+               // Efeito ao passar o mouse nos inputs
+               &:hover {
+                  border: 1px solid #8a8989;
+               }
+            }
+
+            // Divisão de 2 colunas em telefone e celular
+            .col {
+               display: flex;
+
+               input#tel {
+                  margin-right: 15px;
+               }
+            }
+
+            /* Style para placeholder dos inputs no formulario 
+               ==================================================
+            */
+            /* Chrome/Opera/Safari */
+            input::-webkit-input-placeholder {
+               font-size: 20px;
+               color: #8a8989;
+               font-family: 'Noto Sans', sans-serif;
+            }
+
+            /* Mozilla Firefox 4 to 18 */
+            input::-moz-placeholder {
+               font-size: 20px;
+               color: #8a8989;
+               font-family: 'Noto Sans', sans-serif;
+               opacity: 1;
+            }
+
+            /* Firefox 19+ */
+            input::-moz-placeholder {
+               font-size: 20px;
+               color: #8a8989;
+               font-family: 'Noto Sans', sans-serif;
+            }
+
+            /* IE 10+ */
+            input::-ms-input-placeholder {
+               font-size: 20px;
+               color: #8a8989;
+               font-family: 'Noto Sans', sans-serif;
+            }
+
+            /* Microsoft Edge */
+            input::-ms-input-placeholder {
+               font-size: 20px;
+               color: #8a8989;
+               font-family: 'Noto Sans', sans-serif;
+            }
+
+            /* Browsers modernos. */
+            input::placeholder {
+               font-size: 20px;
+               color: #8a8989;
+               font-family: 'Noto Sans', sans-serif;
+            }
+            /* END - Style para placeholder dos inputs no formulario 
+               ==================================================
+            */
+            // Style para botão submit enviar formulário
+            input[type=submit] {
+               background-color: #000697;
+               color: $secondary;
+               font-size: 24px;
+               font-weight: bold;
+               border: 0;
+               transition: all 0.5s ease;
+               cursor: pointer;
+               // Efeito no botão de enviar formulário
+               &:hover {
+                  background: $secondary;
+                  color: #000697;
+                  border: 2px solid #000697;
+               }
+            }
+         }
+
       }
    }
 }
